@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catnipporium | High Quality Cat Products for High Quality Cats.</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+  </head>
+  <body>
+  <!-- Navbar Section -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+	Catnipporium
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+	<span aria-hidden="true"></span>
+	<span aria-hidden="true"></span>
+	<span aria-hidden="true"></span>
+	<span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+	<a class="navbar-item" href="/">Home</a>
+	<a class="navbar-item" href="/catcafes">Cat Cafe Directory</a>
+	<a class="navbar-item" href="/retail">For Businesses</a>
+	<a class="navbar-item" href="/shop">Shop</a>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  
+<section class="section">
+  
+<h1 class="title is-1">Chatty Cat Cafe</h1>
+<h3 class="subtitle is-3">Find them at <a href="https://www.thechattycatcafe.com">https://www.thechattycatcafe.com</a></h3>
+<div class="columns">
+  <div class="column">
+    <h5 class="title is-5 mb-0">Located at:</h5>
+    <address>
+      <p>3575 Maple Avenue</p>
+      <p>Colony Square Mall</p>
+      <p>Zanesville, Ohio, 43701</p>
+      <p>USA</p>
+    </address>
+    <br />
+    <h5 class="title is-5 mb-1">Contact Info</h5>
+    
+      <p>Email: <a href="mailto:contactus@thechattycatcafe.com">contactus@thechattycatcafe.com</a></p>
+    
+    
+  </div>
+  <div class="column">
+  <h5 class="title is-5 mb-0">Hours</h5>
+  <table class="table">
+    <tbody>
+      <tr><td>Monday:</td><td>Closed</td></tr>
+      <tr><td>Tuesday:</td><td>Closed</td></tr>
+      <tr><td>Wednesday:</td><td>10am-2pm 3pm-7pm</td></tr>
+      <tr><td>Thursday:</td><td>10am-2pm 3pm-7pm</td></tr>
+      <tr><td>Friday:</td><td>10am-2pm 3pm-7pm</td></tr>
+      <tr><td>Saturday:</td><td>10am-2pm 3pm-7pm</td></tr>
+      <tr><td>Sunday:</td><td>10am-2pm 3pm-6pm</td></tr>
+    </tbody>
+  </table>
+
+  <h5 class="title is-5 mb-1">Pricing</h5>
+  <p>Hour: $15</p>
+  <p>Half-Hour: $10</p>
+
+  
+  <h5 class="title is-5 mt-5 mb-0">Donate!</h5>
+  <a href="https://www.amazon.com/hz/wishlist/ls/3DZZITPX991XN">Amazon Wishlist</a>
+  
+  </div>
+  <div class="column">
+  <iframe class="map-top" width="598" height="450"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTLaaSox94xKGtY2eQfybYbgcxz4LRv3Y&q=Chatty Cat Cafe3575 Maple Avenue,Zanesville, Ohio, USA"
+ allowfullscreen></iframe>
+  </div>
+</div>
+
+</section>
+
+  </body>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
+  </script>
+</html>
