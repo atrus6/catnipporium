@@ -1,0 +1,58 @@
+---
+layout: layouts/content.njk
+pagination:
+  data: data
+  size: 1
+  alias: cafe
+permalink: "catcafes/{{ cafe.name | slugify }}/"
+---
+
+<h1 class="title is-1">{{ cafe.name }}</h1>
+<h3 class="subtitle is-3">Find them at <a href="{{ cafe.link }}">{{ cafe.link }}</a></h3>
+<div class="columns">
+  <div class="column">
+    <h5 class="title is-5 mb-0">Located at:</h5>
+    <address>
+      <p>{{ cafe.street1 }}</p>
+      <p>{{ cafe.street2 }}</p>
+      <p>{{ cafe.city }}, {{ cafe.state }}, {{ cafe.zipcode }}</p>
+      <p>{{ cafe.country }}</p>
+    </address>
+    <br />
+    <h5 class="title is-5 mb-1">Contact Info</h5>
+    {% if cafe.email %}
+      <p>Email: <a href="mailto:{{ cafe.email }}">{{ cafe.email }}</a></p>
+    {% endif %}
+    {% if cafe.phone_number %}
+      <p>Phone: <a href="tel:{{ cafe.phone_number }}">{{ cafe.phone_number }}</a></p>
+    {% endif %}
+  </div>
+  <div class="column">
+  <h5 class="title is-5 mb-0">Hours</h5>
+  <table class="table">
+    <tbody>
+      <tr><td>Monday:</td><td>{{ cafe.monday_hours }}</td></tr>
+      <tr><td>Tuesday:</td><td>{{ cafe.tuesday_hours }}</td></tr>
+      <tr><td>Wednesday:</td><td>{{ cafe.wednesday_hours }}</td></tr>
+      <tr><td>Thursday:</td><td>{{ cafe.thursday_hours }}</td></tr>
+      <tr><td>Friday:</td><td>{{ cafe.friday_hours }}</td></tr>
+      <tr><td>Saturday:</td><td>{{ cafe.saturday_hours }}</td></tr>
+      <tr><td>Sunday:</td><td>{{ cafe.sunday_hours }}</td></tr>
+    </tbody>
+  </table>
+
+  <h5 class="title is-5 mb-1">Pricing</h5>
+  <p>Hour: {{ cafe.hour_price }}</p>
+  <p>Half-Hour: {{ cafe.halfhour_price }}</p>
+
+  {% if cafe.amazon_link %}
+  <h5 class="title is-5 mt-5 mb-0">Donate!</h5>
+  <a href="{{ cafe.amazon_link }}">Amazon Wishlist</a>
+  {% endif %}
+  </div>
+  <div class="column">
+  <iframe class="map-top" width="598" height="450"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTLaaSox94xKGtY2eQfybYbgcxz4LRv3Y&q={{ cafe.name | e }}{{ cafe.street1 | e}},{{ cafe.city | e }}, {{ cafe.state | e}}, {{ cafe.country | e }}"
+ allowfullscreen></iframe>
+  </div>
+</div>
