@@ -1,0 +1,19 @@
+---
+layout: layouts/hero.njk
+herourl: https://catnipporium.nyc3.cdn.digitaloceanspaces.com/website/cats-cafe-4697753-1_1920.jpg
+title: Cat Cafe Directory
+---
+
+<h1>Catnipporium Supports Cat Cafes</h1>
+<p>Here at Catnipporium, we love Cat Cafes! What a lovely place to grab a drink and chill out with some furballs :)<p>
+<p>Here we aim to have the most <em>complete and accurate</em> listing of Cat Cafes around, and provide enough information to plan your visit! Check here for location, contact info, opening hours and price!<p>
+{% for country, x in cafes_ordered %}
+	<h3 class="title is-3">{{ country }}</h3>
+	{% for state, y in x %}
+		<h4 class="subtitle is-4 ml-1 mt-3 mb-0">{{ state }}</h4>
+		{% for cafe in y %}
+			<p class="ml-2"><a href="/catcafes/{{ cafe | slugify }}">{{ cafe }}</a></p>
+		{% endfor %}
+	{% endfor %}
+{% endfor %}
+BYe
