@@ -9,11 +9,10 @@ title: Cat Cafe Directory
 <p>Here we aim to have the most <em>complete and accurate</em> listing of Cat Cafes around, and provide enough information to plan your visit! Check here for location, contact info, opening hours and price!<p>
 {% for country, x in cafes_ordered %}
 	<h3 class="title is-3">{{ country }}</h3>
-	{% for state, y in x %}
+	{% for state, y in x | dictsort %}
 		<h4 class="subtitle is-4 ml-1 mt-3 mb-0">{{ state }}</h4>
 		{% for cafe in y %}
 			<p class="ml-2"><a href="/catcafes/{{ cafe | slugify }}">{{ cafe }}</a></p>
 		{% endfor %}
 	{% endfor %}
 {% endfor %}
-BYe

@@ -1,5 +1,8 @@
 ---
-layout: layouts/content.njk
+layout: layouts/hero.njk
+herourl: https://catnipporium.nyc3.cdn.digitaloceanspaces.com/website/girl-4181395_1920.jpg
+title: Handmade Cat Products
+subtitle: Shop on Etsy
 ---
 # Give Your Cat the Catnip They Deserve
 ## High Quaility Catnip and High Quality Craftsmanship
