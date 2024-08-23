@@ -24,4 +24,4 @@ Looking to visit a cat cafe? Catnipporium is your ultimate resource. Find the be
 
 [Cat Cafe Directory](/catcafes)
 
-[Tips for Visiting Cat Cafes](/catcafetips)
+<!--[Tips for Visiting Cat Cafes](/catcafetips)-->
