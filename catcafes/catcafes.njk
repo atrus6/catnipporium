@@ -6,7 +6,7 @@ pagination:
   alias: cafe
 permalink: "catcafes/{{ cafe.name | slugify }}/"
 ---
-
+<a class="is-4" href="/catcafes">← Back to List</a>
 <h1 class="title is-1">{{ cafe.name }}</h1>
 <h3 class="subtitle is-3">Find them at <a href="{{ cafe.link }}">{{ cafe.link }}</a></h3>
 <div class="columns">
@@ -42,8 +42,16 @@ permalink: "catcafes/{{ cafe.name | slugify }}/"
   </table>
 
   <h5 class="title is-5 mb-1">Pricing</h5>
-  <p>Hour: {{ cafe.hour_price }}</p>
-  <p>Half-Hour: {{ cafe.halfhour_price }}</p>
+  {% if cafe.hour_price or cafe.halfhour_price %}
+	  {% if cafe.hour_price %}
+	  <p>Hour: {{ cafe.hour_price }}</p>
+	  {% endif %}
+	  {% if cafe.halfhour_price %}
+	  <p>Half-Hour: {{ cafe.halfhour_price }}</p>
+	  {% endif %}
+  {% else %}
+  <p>No info available</p>
+  {% endif %}
 
   {% if cafe.amazon_link %}
   <h5 class="title is-5 mt-5 mb-0">Donate!</h5>

@@ -7,15 +7,14 @@ module.exports = function() {
 	data.forEach(function(item, index) {
 		if (item.country in bigd) {
 			if (item.state in bigd[item.country]) {
-				bigd[item.country][item.state].push(item.name);
+				bigd[item.country][item.state].push([item.name, item.city]);
 			} else {
-				bigd[item.country][item.state] = [item.name];
+				bigd[item.country][item.state] = [[item.name, item.city],];
 			}
 		} else {
 			var x = item.state;
 			bigd[item.country] = {};
-			bigd[item.country][item.state] = [item.name];
-			console.log(bigd[item.country]);
+			bigd[item.country][item.state] = [[item.name, item.city],];
 		}
 	});
 
