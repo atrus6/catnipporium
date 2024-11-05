@@ -19,6 +19,7 @@ in pkgs.mkShell rec {
     pythonPackages.numpy
     pythonPackages.requests
     pythonPackages.pillow
+    pythonPackages.tqdm
 
     # In this particular example, in order to compile any binary extensions they may
     # require, the Python modules listed in the hypothetical requirements.txt need
