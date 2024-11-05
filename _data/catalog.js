@@ -1,27 +1,21 @@
-const PocketBase = require('pocketbase/cjs');
+const fs = require('fs');
+const csv = require('csv-parser');
 
 async function getPillowsData() {
-    try {
-        // Initialize PocketBase
-        const pb = new PocketBase('https://media.mist-toad.ts.net:8890');
-        
-        // Fetch all records from the Pillows collection
-        const records = await pb.collection('Pillows').getFullList({
-            //sort: 'Name',
-        });
-        
-        // Map the records to the desired format
-        const pillowsData = records.map(pillow => ({
-		Image: pb.getFileUrl(pillow, pillow.Image, {"thumb":"512x512f"}),
-            Name: pillow.Name,
-            Quantity: pillow.Quantity
-        }));
-        
-        return pillowsData;
-    } catch (error) {
-        console.error('Error fetching pillows data:', error);
-        return [];
-    }
+	return new Promise((resolve, reject) => {
+		const data = [];
+		fs.createReadStream('_data/products.csv')
+		.pipe(csv())
+		.on('data', (row) => {
+			data.push(row);
+		})
+		.on('end', () => {
+			resolve(data);
+		})
+		.on('error', (err) => {
+			reject(err);
+		});
+	});
 }
 
 // Export the data for 11ty
