@@ -31,6 +31,7 @@ in pkgs.mkShell rec {
     libxslt
     libzip
     zlib
+    nodejs_22
   ];
 
   # Run this command, only after creating the virtual environment
