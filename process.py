@@ -31,7 +31,7 @@ def write_cafes():
     r = requests.get(base + 'collections/Cat_Cafes/records?perPage=1000')
     data = []
 
-    for item in (r.json()["items"]):
+    for item in tqdm(r.json()["items"]):
         data.append({
                 "name": item['Name'],
                 "street1": item['Street_1'],
