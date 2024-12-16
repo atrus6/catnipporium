@@ -12,7 +12,7 @@ title: Cat Cafe Directory
 	{% for state, y in x | dictsort %}
 		<h4 class="subtitle is-4 ml-1 mt-3 mb-0">{{ state }}</h4>
 		{% for cafe, city in y %}
-			<p class="ml-2">{{ city }}<a class="ml-2" href="/catcafes/{{ cafe | slugify }}">{{ cafe }}</a></p>
+			<p class="ml-2">{{ city }}<a class="ml-2" href="/catcafes/{{ cafe | slugify }}/">{{ cafe }}</a></p>
 		{% endfor %}
 	{% endfor %}
 {% endfor %}

@@ -6,6 +6,9 @@ pagination:
   size: 1
   alias: cafe
 permalink: "catcafes/{{ cafe.name | slugify }}/"
+eleventyComputed:
+  title: "{{ cafe.name }}"
+  metaDescription: "{{ cafe.name }} is a cat cafe in {{ cafe.city}}, {{cafe.state }}. Click here for hour and pricing info."
 ---
 <a class="is-4" href="/catcafes">← Back to List</a>
 <h1 class="title is-1">{{ cafe.name }}</h1>
