@@ -12,10 +12,10 @@ eleventyComputed:
 ---
 <a class="is-4" href="/catcafes">← Back to List</a>
 <h1 class="title is-1">{{ cafe.name }}</h1>
-<h3 class="subtitle is-3"><a href="{{ cafe.link }}">Find them here</a></h3>
+<h2 class="subtitle is-3"><a href="{{ cafe.link }}">Find them here</a></h2>
 <div class="columns">
   <div class="column">
-    <h5 class="title is-5 mb-0">Located at:</h5>
+    <h3 class="title is-5 mb-0">Located at:</h3>
     <address>
       <p>{{ cafe.street1 }}</p>
       <p>{{ cafe.street2 }}</p>
@@ -23,7 +23,7 @@ eleventyComputed:
       <p>{{ cafe.country }}</p>
     </address>
     <br />
-    <h5 class="title is-5 mb-1">Contact Info</h5>
+    <h3 class="title is-5 mb-1">Contact Info</h3>
     {% if cafe.email %}
       <p>Email: <a href="mailto:{{ cafe.email }}">{{ cafe.email }}</a></p>
     {% endif %}
@@ -32,7 +32,7 @@ eleventyComputed:
     {% endif %}
   </div>
   <div class="column">
-  <h5 class="title is-5 mb-0">Hours</h5>
+  <h3 class="title is-5 mb-0">Hours</h3>
   <table class="table">
     <tbody>
       <tr><td>Monday:</td><td>{{ cafe.monday_hours }}</td></tr>
@@ -45,7 +45,7 @@ eleventyComputed:
     </tbody>
   </table>
 
-  <h5 class="title is-5 mb-1">Pricing</h5>
+  <h3 class="title is-5 mb-1">Pricing</h3>
   {% if cafe.hour_price %}
 	  <p>{{ cafe.hour_price }}</p>
   {% else %}
@@ -59,5 +59,7 @@ eleventyComputed:
  allowfullscreen></iframe>
   </div>
 </div>
+<div>Cat Cafes such as {{ cafe.name }} do <em>NOT</em> take in stray or rescued cats! However, they are knowledable, and by contacting them {% if cafe.email %}(<a href="mailto:{{ cafe.email }}">{{ cafe.email }}</a>){% endif %}{% if cafe.phone_number %} (<a href="tel:{{ cafe.phone_number }}">{{ cafe.phone_number}}</a>){% endif %} they can direct you to a proper shelter.</div>
+<div>Many cafes have a "no shoes, socks only" policy, so bring an extra pair, or purchase at the cafe. See <a href="{{ cafe.link }}"> their website</a> for current policies and procedures.</div>
   <div>We do our best to make sure this information is accurate and up to date. The info displayed here is primarily there to give a general idea of the times and prices of the cafe you're looking at. We always recommend giving them a call to double check any info. Things change! We hope you enjoy your visit to your local (or not so local) cat cafe!
   </div>
