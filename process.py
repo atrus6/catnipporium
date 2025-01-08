@@ -28,7 +28,7 @@ def write_pillows():
             wr.writerow(item)
 
 def write_cafes():
-    r = requests.get(base + 'collections/Cat_Cafes/records?perPage=1000')
+    r = requests.get(base + 'collections/Cat_Cafes/records?perPage=1000&filter=(closed=false)')
     data = []
 
     for item in tqdm(r.json()["items"]):
