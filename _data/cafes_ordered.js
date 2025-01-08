@@ -2,21 +2,24 @@ const fs = require('node:fs');
 
 module.exports = function() {
 	const data = require('./data.json');
-	var bigd = {};
+	var bigd = {}; 
 
 	data.forEach(function(item, index) {
-		if (item.country in bigd) {
-			if (item.state in bigd[item.country]) {
-				bigd[item.country][item.state].push([item.name, item.city]);
-			} else {
-				bigd[item.country][item.state] = [[item.name, item.city],];
-			}
-		} else {
-			var x = item.state;
+		if (!(item.country in bigd)) {
 			bigd[item.country] = {};
-			bigd[item.country][item.state] = [[item.name, item.city],];
 		}
-	});
 
+		if (!(item.state in bigd[item.country])) {
+			bigd[item.country][item.state] = {};
+		}
+
+		if (!(item.city in bigd[item.country][item.state])) {
+			bigd[item.country][item.state][item.city] = [];
+		}
+
+		bigd[item.country][item.state][item.city].push(item.name);
+		console.log(bigd[item.country][item.state][item.city]);
+	});
+  console.log(bigd);
 	return bigd;
 }
