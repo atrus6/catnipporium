@@ -3,16 +3,59 @@ layout: layouts/hero.njk
 herourl: https://catnipporium.nyc3.cdn.digitaloceanspaces.com/website/cats-cafe-4697753-1_1920.jpg
 title: Cat Cafe Directory
 ---
+<style>
+.cafe-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 256px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  padding: 15px;
+  margin: 15px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.cafe-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(1,1,1,0.2);
+}
+.cafe-city {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cafe-name {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cafe-inner {
+  #text-align: center;
+}
+</style>
 
 <h1>Catnipporium Supports Cat Cafes</h1>
 <p>Here at Catnipporium, we love Cat Cafes! What a lovely place to grab a drink and chill out with some furballs :)<p>
 <p>Here we aim to have the most <em>complete and accurate</em> listing of Cat Cafes around, and provide enough information to plan your visit! Check here for location, contact info, opening hours and price!<p>
-{% for country, x in cafes_ordered %}
+{% for country, states in cafes_ordered %}
 	<h3 class="title is-3">{{ country }}</h3>
-	{% for state, y in x | dictsort %}
+	{% for state, cities in states | dictsort %}
 		<h4 class="subtitle is-4 ml-1 mt-3 mb-0">{{ state }}</h4>
-		{% for cafe, city in y %}
-			<p class="ml-2">{{ city }}<a class="ml-2" href="/catcafes/{{ cafe | slugify }}/">{{ cafe }}</a></p>
+	  <div style="display: flex; flex-wrap: wrap;">
+		{% for city, cafes in cities |dictsort %}
+				<div class="cafe-card">
+				  <div class="cafe-inner">
+				    <h3 class="cafe-city">{{ city }}</h3>
+						<ul>
+		        {% for cafe in cafes %}
+				      <li><p class="cafe-name"><a href="/catcafes/{{ cafe | slugify }}/">{{ cafe }}</a></p></li>
+            {% endfor%}
+						</ul>
+				  </div>
+				</div>
 		{% endfor %}
+		</div>
 	{% endfor %}
 {% endfor %}
