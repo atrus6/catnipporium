@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% if metaDescription %}{{ metaDescription }}{% else %}{{ site.description }}{% endif %}">
     <title>Catnipporium | {{ title }}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
@@ -14,52 +14,24 @@
   </head>
   <body>
   <!-- Navbar Section -->
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-	Catnipporium
-      </a>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-	<span aria-hidden="true"></span>
-	<span aria-hidden="true"></span>
-	<span aria-hidden="true"></span>
-	<span aria-hidden="true"></span>
-      </a>
+    <div class="header">
+        <h1>Catnipporium</h1>
+        <p>Premium Handcrafted Catnip Toys Your Cats Will Love</p>
     </div>
-    <div id="navbarMenu" class="navbar-menu">
-      <div class="navbar-start">
-	<a class="navbar-item" href="/">Home</a>
-	<a class="navbar-item" href="/catcafes/">Cat Cafe Directory</a>
-	<a class="navbar-item" href="/retail/">For Businesses</a>
-	<a class="navbar-item" href="/shop/">Shop</a>
-	<a class="navbar-item" href="/products/">Current Pillow Selection</a>
-      </div>
-    </div>
-  </nav>
+
+    <nav class="nav">
+
+        <a href="/">Home</a>
+        <a href="/shop/">Shop</a>
+        <a href="/retail/">Wholesale</a>
+        <a href="/catcafes/">Cat Cafe Directory</a>
+        <a href="/products/">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
   <!-- End Navbar -->
-  {{ content | safe }}
+    <main class="main">
+      {{ content | safe }}
+    </main>
   </body>
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Add a click event on each of them
-  $navbarBurgers.forEach( el => {
-    el.addEventListener('click', () => {
-
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
-
-    });
-  });
-
-});
-  </script>
 </html>

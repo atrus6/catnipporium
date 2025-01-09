@@ -1,0 +1,259 @@
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+.header {
+	background-image: url(https://catnipporium.nyc3.cdn.digitaloceanspaces.com/website/cat-5628953_1920.jpg);
+	background-size: cover;
+	background-position: 0% 10%;
+	color: white;
+	text-align: center;
+	padding: 4rem 2rem;
+	position: relative;
+}
+.header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+.header-content {
+	position: relative;
+	z-index: 2;
+}
+.header h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.header p {
+	font-size: 1.2rem;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.nav {
+	background-color: #388E3C;
+	padding: 1rem;
+	text-align: center;
+}
+.nav a {
+	color: white;
+	text-decoration: none;
+	margin: 0 1rem;
+	padding: 0.5rem;
+}
+.nav a:hover {
+	background-color: #2E7D32;
+	border-radius: 4px;
+}
+.main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+.hero {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+.cta-button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	border-radius: 4px;
+	display: inline-block;
+	margin: 1rem;
+}
+.features {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+.feature-card {
+	flex: 1;
+	min-width: 250px;
+	max-width: 350px;
+	padding: 1.5rem;
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+	margin: auto;
+}
+
+.customer-types {
+	display: flex;
+	justify-content: space-around;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+.customer-section {
+	flex: 1;
+	padding: 2rem;
+	text-align: center;
+	background-color: #f5f5f5;
+	border-radius: 8px;
+}
+.footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 2rem;
+	margin-top: 2rem;
+}
+/* New Header Typography Styles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Arial', sans-serif;
+	line-height: 1.2;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+	color: #333;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+h6 {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+/* Override header colors for sections with white text */
+.header h1,
+.header h2,
+.header h3,
+.header h4,
+.header h5,
+.header h6,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+	color: white;
+}
+
+/* List Styles */
+ul {
+	list-style: none;
+	padding-left: 1.8em;
+	margin: 1em 0;
+}
+
+ul li {
+	position: relative;
+	margin-bottom: 0.5em;
+	line-height: 1.6;
+}
+
+ul li::before {
+	content: '';
+            position: absolute;
+            left: -1.5em;
+            top: 0.3em;
+            width: 1em;
+            height: 1em;
+						background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg version='1.1' x='0px' y='0px' viewBox='0 0 89.899757 90.051659' xml:space='preserve' id='svg6' sodipodi:docname='noun-paw-3699370.svg' width='89.899757' height='90.051659' inkscape:version='1.4 (e7c3feb100, 2024-10-09)' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs6' /%3E%3Csodipodi:namedview id='namedview6' pagecolor='%23ffffff' bordercolor='%23000000' borderopacity='0.25' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' inkscape:zoom='6.816' inkscape:cx='45.04108' inkscape:cy='57.43838' inkscape:window-width='1908' inkscape:window-height='1029' inkscape:window-x='0' inkscape:window-y='0' inkscape:window-maximized='1' inkscape:current-layer='svg6' /%3E%3Cg id='g1' transform='translate(-5.0444068,-4.9483448)' style='fill:%234caf50;fill-opacity:1'%3E%3Cpolygon points='81.7,71.6 81.3,70.6 80.2,68.6 78.7,66.7 76.7,64.9 74.4,62.8 72.5,61 70.7,59 69.2,57 67.8,54.9 66.3,52.1 65.4,50.2 64.3,48.1 62.9,45.8 61.3,43.7 60.2,42.6 59.1,41.6 57.6,40.5 55.8,39.7 53.5,38.9 51.2,38.6 48.8,38.6 46.5,38.9 43.2,40.1 40,42.3 37.9,44.4 36.6,46.4 35.3,48.7 33.6,52.2 32,55.3 30.2,57.7 28,60.5 21.5,66.5 20.9,67 19.4,69.1 18.2,71.5 17.5,74.5 17.1,77.2 17,80.2 17.3,82.2 18.2,85 19.5,87.6 20.9,89.4 22.7,91.2 25.1,92.8 27.9,94.1 30,94.6 33.2,94.7 36.3,94 38.2,93.1 39,92.5 40.8,91.5 42.5,90.5 44,89.6 45.6,88.9 46.9,88.3 48.4,87.9 50,87.8 51.9,88.1 53.3,88.4 55.6,89.5 58.4,90.9 60.7,92.4 62.8,93.6 64.9,94.5 66.9,94.9 68.6,95 70,94.9 72.2,94.3 75,93 77,91.6 79.1,89.5 80.6,87.5 81.9,84.8 82.7,82.2 83,80 83,77.7 82.9,76.4 82.6,74.2 82.3,73.2 ' id='polygon1' style='fill:%234caf50;fill-opacity:1' /%3E%3C/g%3E%3Cg id='g2' transform='translate(-5.0444068,-4.9483448)' style='fill:%234caf50;fill-opacity:1'%3E%3Cellipse transform='matrix(0.1052,-0.9945,0.9945,0.1052,36.8613,81.7492)' cx='63.900002' cy='20.4' rx='15.4' ry='10.8' id='ellipse1' style='fill:%234caf50;fill-opacity:1' /%3E%3C/g%3E%3Cg id='g3' transform='translate(-5.0444068,-4.9483448)' style='fill:%234caf50;fill-opacity:1'%3E%3Cellipse transform='matrix(0.9945,-0.1052,0.1052,0.9945,-1.9366,3.9151)' cx='36.099998' cy='20.299999' rx='10.8' ry='15.4' id='ellipse2' style='fill:%234caf50;fill-opacity:1' /%3E%3C/g%3E%3Cg id='g4' transform='translate(-5.0444068,-4.9483448)' style='fill:%234caf50;fill-opacity:1'%3E%3Cellipse transform='matrix(0.2174,-0.9761,0.9761,0.2174,22.5065,116.4899)' cx='83.900002' cy='44.200001' rx='15.3' ry='10.8' id='ellipse3' style='fill:%234caf50;fill-opacity:1' /%3E%3C/g%3E%3Cg id='g5' transform='translate(-5.0444068,-4.9483448)' style='fill:%234caf50;fill-opacity:1'%3E%3Cellipse transform='matrix(0.9761,-0.2174,0.2174,0.9761,-9.2257,4.5578)' cx='16.1' cy='44.200001' rx='10.8' ry='15.3' id='ellipse4' style='fill:%234caf50;fill-opacity:1' /%3E%3C/g%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-size: contain;
+}
+
+/* Nested lists */
+ul ul {
+	margin: 0.5em 0 0.5em 1em;
+}
+
+/* Special list styles for navigation */
+.nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.nav ul li {
+	margin: 0 1rem;
+}
+
+.nav ul li::before {
+	content: none;
+}
+
+/* List styles in footer */
+.footer ul {
+	padding: 0;
+	margin: 1em 0;
+	list-style: none;
+}
+
+.footer ul li {
+	margin-bottom: 0.5em;
+}
+
+.footer ul li::before {
+	content: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	h1 { font-size: 2rem; }
+	h2 { font-size: 1.75rem; }
+	h3 { font-size: 1.5rem; }
+	h4 { font-size: 1.25rem; }
+	h5 { font-size: 1.1rem; }
+	h6 { font-size: 1rem; }
+
+	ul {
+		padding-left: 1.2em;
+	}
+}
+
+@media (max-width: 768px) {
+	.customer-types {
+		flex-direction: column;
+	}
+	.nav {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}
