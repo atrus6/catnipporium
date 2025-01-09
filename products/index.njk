@@ -2,20 +2,16 @@
 layout: layouts/content.njk
 ---
 <h1>Current Pillow Stock</h1>
-<div class="columns is-multiline">
+<div style="display: flex; flex-wrap: wrap;">
 {% for pillow in catalog %}
-<div class="column is-one-fifth">
-<div class="card">
-  <div class="card-image">
+<div class="cafe-card">
   	<figure class="image">
-        <a href="/static/img/{{ pillow.Image }}"><img src="/static/img/thumb_{{ pillow.Image }}" alt="{{ pillow.Name }}"></a>
+        <a href="/static/img/{{ pillow.Image }}"><img class='card-image' src="/static/img/thumb_{{ pillow.Image }}" alt="{{ pillow.Name }}"></a>
 	</figure>
+  <div class="cafe-inner">
+    <p class="cafe-city">{{ pillow.Name }}</p>
+    <p class="cafe-name">Quantity Available: {{ pillow.Quantity }}</p>
   </div>
-  <div class="card-content">
-    <p class="title is-4">{{ pillow.Name }}</p>
-    <p class="subtitle is-6">Quantity Available: {{ pillow.Quantity }}</p>
-  </div>
-</div>
 </div>
 {% endfor %}
 </div>

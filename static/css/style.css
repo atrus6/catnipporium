@@ -233,6 +233,41 @@ ul ul {
 	content: none;
 }
 
+.cafe-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 256px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  padding: 15px;
+  margin: 15px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.cafe-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(1,1,1,0.2);
+}
+.cafe-city {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cafe-name {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cafe-inner {
+  #text-align: center;
+}
+
+.card-image {
+	max-width: 100%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
 	h1 { font-size: 2rem; }
