@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+title: Pet Toys for Owners and Parents
 metaDescription: Your Cat Needs Catnip Pillows. Ours are the best.
 ---
 # Give Your Cat the Catnip They Deserve
