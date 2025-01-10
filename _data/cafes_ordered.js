@@ -18,8 +18,6 @@ module.exports = function() {
 		}
 
 		bigd[item.country][item.state][item.city].push(item.name);
-		console.log(bigd[item.country][item.state][item.city]);
 	});
-  console.log(bigd);
 	return bigd;
 }
