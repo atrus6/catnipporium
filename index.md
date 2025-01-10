@@ -2,7 +2,6 @@
 layout: layouts/base.njk
 title: Your Cat's Happy Place
 ---
-    <main class="main">
         <section class="hero">
             <h2>Made with Love, Filled with Joy</h2>
             <p>Our premium catnip pillows are handcrafted using the finest organic catnip and durable, pet-safe materials.</p>
@@ -37,9 +36,3 @@ title: Your Cat's Happy Place
                 <a href="/retail/" class="cta-button">Wholesale Program</a>
             </div>
         </section>
-    </main>
-
-    <footer class="footer">
-        <p>Contact us: hi@catnipporium.com</p>
-        <p>Made with love in Ohio</p>
-    </footer>
