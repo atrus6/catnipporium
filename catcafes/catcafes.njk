@@ -10,12 +10,12 @@ eleventyComputed:
   title: "{{ cafe.name }}"
   metaDescription: "{{ cafe.name }} is a cat cafe in {{ cafe.city}}, {{cafe.state }}. Click here for hour and pricing info."
 ---
-<a class="is-4" href="/catcafes">← Back to List</a>
-<h1 class="title is-1">{{ cafe.name }}</h1>
-<h2 class="subtitle is-3"><a href="{{ cafe.link }}">Find them here</a></h2>
+<a href="/catcafes">← Back to List</a>
+<h1>{{ cafe.name }}</h1>
+<h2><a href="{{ cafe.link }}">Find them here</a></h2>
 <div class="columns">
   <div class="column">
-    <h3 class="title is-5 mb-0">Located at:</h3>
+    <h3>Located at:</h3>
     <address>
       <p>{{ cafe.street1 }}</p>
       <p>{{ cafe.street2 }}</p>
@@ -23,35 +23,34 @@ eleventyComputed:
       <p>{{ cafe.country }}</p>
     </address>
     <br />
-    <h3 class="title is-5 mb-1">Contact Info</h3>
+    <h3>Contact Info</h3>
     {% if cafe.email %}
       <p>Email: <a href="mailto:{{ cafe.email }}">{{ cafe.email }}</a></p>
     {% endif %}
     {% if cafe.phone_number %}
       <p>Phone: <a href="tel:{{ cafe.phone_number }}">{{ cafe.phone_number }}</a></p>
     {% endif %}
-  </div>
-  <div class="column">
-  <h3 class="title is-5 mb-0">Hours</h3>
-  <table class="table">
-    <tbody>
-      <tr><td>Monday:</td><td>{{ cafe.monday_hours }}</td></tr>
-      <tr><td>Tuesday:</td><td>{{ cafe.tuesday_hours }}</td></tr>
-      <tr><td>Wednesday:</td><td>{{ cafe.wednesday_hours }}</td></tr>
-      <tr><td>Thursday:</td><td>{{ cafe.thursday_hours }}</td></tr>
-      <tr><td>Friday:</td><td>{{ cafe.friday_hours }}</td></tr>
-      <tr><td>Saturday:</td><td>{{ cafe.saturday_hours }}</td></tr>
-      <tr><td>Sunday:</td><td>{{ cafe.sunday_hours }}</td></tr>
-    </tbody>
-  </table>
 
-  <h3 class="title is-5 mb-1">Pricing</h3>
-  {% if cafe.hour_price %}
+   <h3>Hours</h3>
+   <table>
+     <tbody>
+       <tr><td>Monday:</td><td>{{ cafe.monday_hours }}</td></tr>
+       <tr><td>Tuesday:</td><td>{{ cafe.tuesday_hours }}</td></tr>
+       <tr><td>Wednesday:</td><td>{{ cafe.wednesday_hours }}</td></tr>
+       <tr><td>Thursday:</td><td>{{ cafe.thursday_hours }}</td></tr>
+       <tr><td>Friday:</td><td>{{ cafe.friday_hours }}</td></tr>
+       <tr><td>Saturday:</td><td>{{ cafe.saturday_hours }}</td></tr>
+       <tr><td>Sunday:</td><td>{{ cafe.sunday_hours }}</td></tr>
+     </tbody>
+   </table>
+   <br />
+
+  <h3>Pricing</h3>
+   {% if cafe.hour_price %}
 	  <p>{{ cafe.hour_price }}</p>
-  {% else %}
-  <p>No info available</p>
-  {% endif %}
-
+   {% else %}
+    <p>No info available</p>
+   {% endif %}
   </div>
   <div class="column">
   <iframe class="map-top" width="598" height="450"
@@ -59,7 +58,9 @@ eleventyComputed:
  allowfullscreen></iframe>
   </div>
 </div>
+<h3>Some Cafe Notes</h3>
 <div>Cat Cafes such as {{ cafe.name }} do <em>NOT</em> take in stray or rescued cats! However, they are knowledable, and by contacting them {% if cafe.email %}(<a href="mailto:{{ cafe.email }}">{{ cafe.email }}</a>){% endif %}{% if cafe.phone_number %} (<a href="tel:{{ cafe.phone_number }}">{{ cafe.phone_number}}</a>){% endif %} they can direct you to a proper shelter.</div>
+
 <div>Many cafes have a "no shoes, socks only" policy, so bring an extra pair, or purchase at the cafe. See <a href="{{ cafe.link }}"> their website</a> for current policies and procedures.</div>
   <div>We do our best to make sure this information is accurate and up to date. The info displayed here is primarily there to give a general idea of the times and prices of the cafe you're looking at. We always recommend giving them a call to double check any info. Things change! We hope you enjoy your visit to your local (or not so local) cat cafe!
   </div>

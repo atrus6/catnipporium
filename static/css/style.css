@@ -268,6 +268,14 @@ ul ul {
 	max-width: 100%;
 }
 
+.columns {
+	display: flex;
+}
+
+.column {
+	flex: 50%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
 	h1 { font-size: 2rem; }
@@ -280,9 +288,7 @@ ul ul {
 	ul {
 		padding-left: 1.2em;
 	}
-}
 
-@media (max-width: 768px) {
 	.customer-types {
 		flex-direction: column;
 	}
@@ -291,4 +297,10 @@ ul ul {
 		flex-direction: column;
 		gap: 0.5rem;
 	}
+  .column {
+    flex: 100%;
+  }
+  .columns {
+    flex-wrap: wrap;
+  }
 }
