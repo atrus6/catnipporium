@@ -19,11 +19,11 @@ def write_pillows():
         i = Image.open(BytesIO(requests.get(url).content))
         i.save("./static/img/" + name)
 
-        data.append([item["Name"], name, item["Quantity"]])
+        data.append([item["Name"], name, item["Quantity"], item["etsy_link"]])
 
     with open('./_data/products.csv', 'w') as csvfile:
         wr = csv.writer(csvfile)
-        wr.writerow(['Name', 'Image', 'Quantity'])
+        wr.writerow(['Name', 'Image', 'Quantity', 'etsy_link'])
         for item in data:
             wr.writerow(item)
 
